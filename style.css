@@ -1,0 +1,156 @@
+
+@font-face {
+    font-family: Digital-7 ;
+    src: url(./digital-7-font/digital-7.ttf);
+}
+
+.WatchPo{
+    position: relative; 
+    clear: both;
+}
+.heading{
+    
+}
+.watchHeading {
+	font-size: 2rem;
+	font-family: 'Times New Roman', Times, serif;
+	width: 300px;
+	display: block;
+	margin: auto;
+	background: rgb(6, 167, 14);
+	color: #fff;
+	text-align: center;
+}
+.smartClock{
+    position: relative;
+	
+    height: auto;
+    width: 300px;
+    margin: auto;
+	border: 2px solid red;
+}
+
+.smartClock img {
+	height: auto;
+	width: 295px;
+	position: relative;
+	left: -12px;
+}
+
+.smartClock .clockData{
+    text-align: center;
+}
+.smartClock .clockData span{
+    font-family: Digital-7;
+    
+}
+.smartClock .clockData .hours {
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 52px;
+	position: absolute;
+	left: 75px;
+	top: 176px;
+	color: rgb(162, 0, 255);
+}
+
+.smartClock .clockData .minutes {
+	font-family: 'Times New Roman', Times, serif;
+    font-size: 52px;
+    position: absolute;
+    left: 142px;
+    top: 176px;
+    color: rgb(162, 0, 255);
+}
+.smartClock .clockData .clone {
+    font-size: 52px;
+    position: absolute;
+    left: 118px;
+    top: 172px;
+    color: rgb(94, 30, 0);
+}
+.smartClock .clockData .seconds {
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 50px;
+	position: absolute;
+	left: 0px;
+	top: 126px;
+	display: block;
+	width: 300px;
+	color: rgb(180, 77, 30);
+
+}
+
+.smartClock .clockData .ampm {
+	font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    position: absolute;
+    left: 195px;
+    top: 198px;
+	color: rgb(6, 66, 11);
+}
+.smartClock .clockData .fullDate {
+	font-size: 25px;
+	position: absolute;
+	left: 96px;
+	top: 240px;
+	color: rgb(53, 124, 31);
+}
+.smartClock .clockData .week {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	position: absolute;
+	left: 0px;
+	top: 275px;
+	display: block;
+	width: 300px;
+	color: rgb(230, 46, 46);
+}
+.smartClock .clockData .notifi {
+	position: absolute;
+	left: 80px;
+	top: 109px;
+	font-size: 13px;
+}
+.smartClock .clockData .icon {
+	position: absolute;
+	right: 71px;
+	top: 109px;
+	font-size: 13px;
+}
+
+/* Timer clock- with setTimeinterval Start with injput & loder */
+
+.loderTimerP{
+    width: 100%;
+    height: 20px;
+    border-radius: 15px;
+    border: rgb(123, 255, 0) 2px solid;
+}
+.loderTimer{
+    width: 100%;
+    height: 16px;
+    background-color: green;
+    border-radius: 15px;
+}
+/* Timer clock- with setTimeinterval End with injput & loder */
+
+
+/* Basic TO-DO App start (whithout array) */
+.loderTimerP{
+    width: 100%;
+    height: 20px;
+    border-radius: 15px;
+    border: rgb(123, 255, 0) 2px solid;
+}
+.loderTimer{
+    width: 100%;
+    height: 16px;
+    background-color: green;
+    border-radius: 15px;
+}
+/* Basic TO-DO App End (whithout array) */
+
+.by-an{
+	text-align: right;
+	display: block;
+}
