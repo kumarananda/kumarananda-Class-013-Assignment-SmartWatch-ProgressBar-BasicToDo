@@ -113,3 +113,108 @@ add.addEventListener('click', function () {
 
 });
 // <!-- Basic TO-DO App end (whithout array) -->
+
+
+
+
+// Subject Marks app with notification Color start
+const inName = document.getElementById('inputName');
+const inFathers = document.getElementById('inputFathers');
+const inMothers = document.getElementById('inputMothers');
+const inAge = document.getElementById('inputAge');
+const inClass = document.getElementById('inputClass');
+
+const inBangla  = document.getElementById('inputBangla');
+const inEnglish = document.getElementById('inputEnglish');
+const inMath = document.getElementById('inputMath');
+const inSocial = document.getElementById('inputSocial');
+const inScience = document.getElementById('inputScience');
+const inReligion = document.getElementById('inputReligion');
+
+const gpaForm = document.getElementById('gpaForm');
+
+const detailsBody = document.getElementById('detailsBody');
+const resultBody = document.getElementById('resultBody');
+const finalResult = document.getElementById('finalResult');
+
+const visibleCon = document.querySelector('.visibleCon')
+
+gpaForm.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  let avrMark = (parseInt(inBangla.value) + parseInt(inEnglish.value) + parseInt(inMath.value) + parseInt(inSocial.value) + parseInt(inSocial.value) + parseInt(inReligion.value)) / 6;
+  let avrGpa = myr.gpa(avrMark);
+  let finalGrade = myr.totalGrade(avrGpa)
+
+  
+
+  console.log(finalGrade);
+  
+
+  detailsBody.innerHTML = `
+  <tr>
+    <td class="tg-0lax">01</td>
+    <td class="tg-0lax">${inName.value}</td>
+    <td class="tg-0lax">${inFathers.value}</td>
+    <td class="tg-0lax">${inMothers.value}</td>
+    <td class="tg-0lax">${inAge.value}</td>
+    <td class="tg-0lax">${inClass.value}</td>
+  </tr>`;
+  resultBody.innerHTML = `
+  <tr>
+  <td class="tg-0lax">01</td>
+  <td class="tg-0lax">Bangla</td>
+  <td class="tg-0lax">${inBangla.value}</td>
+  <td class="tg-0lax">${myr.gpa(inBangla.value)}</td>
+  <td class="tg-0lax">${myr.grade(inBangla.value)}</td>
+  </tr>
+  <tr>
+  <td class="tg-0lax">02</td>
+  <td class="tg-0lax">English</td>
+  <td class="tg-0lax">${inEnglish.value}</td>
+  <td class="tg-0lax">${myr.gpa(inEnglish.value).toFixed(2)}</td>
+  <td class="tg-0lax">${myr.grade(inEnglish.value)}</td>
+  </tr>
+  <tr>
+  <td class="tg-0lax">03</td>
+  <td class="tg-0lax">Math</td>
+  <td class="tg-0lax">${inMath.value}</td>
+  <td class="tg-0lax">${myr.gpa(inMath.value).toFixed(2)}</td>
+  <td class="tg-0lax">${myr.grade(inMath.value)}</td>
+  </tr>
+  <tr>
+  <td class="tg-0lax">04</td>
+  <td class="tg-0lax">Social Science</td>
+  <td class="tg-0lax">${inSocial.value}</td>
+  <td class="tg-0lax">${myr.gpa(inSocial.value).toFixed(2)}</td>
+  <td class="tg-0lax">${myr.grade(inSocial.value)}</td>
+  </tr>
+  <tr>
+  <td class="tg-0lax">05</td>
+  <td class="tg-0lax">Science</td>
+  <td class="tg-0lax">${inScience.value}</td>
+  <td class="tg-0lax">${myr.gpa(inScience.value).toFixed(2)}</td>
+  <td class="tg-0lax">${myr.grade(inScience.value)}</td>
+  </tr>
+  <tr>
+  <td class="tg-0lax">06</td>
+  <td class="tg-0lax">Religion</td>
+  <td class="tg-0lax">${inReligion.value}</td>
+  <td class="tg-0lax">${myr.gpa(inReligion.value).toFixed(2)}</td>
+  <td class="tg-0lax">${myr.grade(inReligion.value)}</td>
+  </tr>
+  `;
+  finalResult.innerHTML =`
+  <p>${myr.cgpacal(myr.gpa(inBangla.value), myr.gpa(inEnglish.value), myr.gpa(inMath.value), myr.gpa(inSocial.value), myr.gpa(inScience.value), myr.gpa(inReligion.value) )}</p>
+  `;
+  finalResult.style.backgroundColor =  myr.notifiColor(finalGrade);
+
+  visibleCon.style =`
+  visibility: visible;
+  display: inherit;
+  `;
+
+
+});
+
+// Subject Marks app with notification Color End

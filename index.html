@@ -92,6 +92,115 @@
     </ul>
     <!-- Basic TO-DO App End (whithout array)-->
 
+
+
+    <!-- Subject Marks app with notification Color start-->
+    <section class="marks-app " >
+        <div class="container">
+            <div class="row">
+                <h2 class="mt-4 text-center">Subject Marks app with notification Color</h2>
+            </div>
+            <div class="row">
+                <div class="col-xl-4">
+                    <h3 class="text-center mt-5">Input your data for result calculation</h3>
+                    <div class="inputBasic ">
+                        <form id="gpaForm" class="inputBasicFrom"  action="">
+                        <span class="inputLable">*Name</span>
+                        <input type="text" id="inputName" class="inputName" placeholder="Name">
+                        <span class="inputLable">*Fathers Name</span>
+                        <input type="text" id="inputFathers" class="inputFathersName" placeholder="Fathers Name">
+                        <span class="inputLable">*Mothers Name</span> 
+                        <input type="text" id="inputMothers" class="inputMothersName" placeholder="Mothers Name">
+                        <span class="inputLable">*Age</span>
+                        <input type="text" id="inputAge" class="inputAge" placeholder="Age">
+                        <span class="inputLable">*Class</span>
+                        <input type="text" id="inputClass" class="inputClass" placeholder="Class">
+                        <h4 class="mt-4">Subject</h4>
+                        <hr>
+                        <span class="inputLable">*Bangla</span>
+                        <input type="text" id="inputBangla" class="inputBangla" placeholder="Bangla">
+                        <span class="inputLable">*English</span>
+                        <input type="text" id="inputEnglish" class="inputEnglish" placeholder="English">
+                        <span class="inputLable">*Math</span>
+                        <input type="text" id="inputMath" class="inputMath" placeholder="Math">
+                        <span class="inputLable">*Social Science</span>
+                        <input type="text" id="inputSocial" class="inputSocScience" placeholder="Social Science">
+                        <span class="inputLable">*Science</span>
+                        <input type="text" id="inputScience" class="inputScience" placeholder="Science">
+                        <span class="inputLable">*Religion</span>
+                        <input type="text" id="inputReligion" class="inputReligion" placeholder="Religion">
+                        <br>
+                        <input type="submit" id="inputSubmit" class="inputSubmit mt-2 btn btn-primary btn-larg" value="Submit">
+                        </form>
+                        
+                    </div>
+                </div>
+                <div class="col-xl-8">
+                    <div class="visibleCon">
+                        <div class="StudentsDetails mt-5">
+                            <h3>Students Details</h3>
+                            <table class="tg w-100">
+                                <thead>
+                                    <tr>
+                                        <th class="tg-0lax">#No</th>
+                                        <th class="tg-0lax">Name</th>
+                                        <th class="tg-0lax">Father's Name</th>
+                                        <th class="tg-0lax">Mother's Name</th>
+                                        <th class="tg-0lax">Age</th>
+                                        <th class="tg-0lax">Class</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="detailsBody" class="" >
+                                   <!-- This table Row will come form JS --> 
+                                    <!-- <tr>
+                                        <td class="tg-0lax"></td>
+                                        <td class="tg-0lax"></td>
+                                        <td class="tg-0lax"></td>
+                                        <td class="tg-0lax"></td>
+                                        <td class="tg-0lax"></td>
+                                        <td class="tg-0lax"></td>
+                                    </tr> -->
+                                </tbody>
+                            </table>
+                        </div>
+    
+                        <div class="gpa-result mt-5">
+                            <h3>Result</h3>
+                            <table class="tg w-100">
+                                <thead>
+                                <tr>
+                                    <th class="tg-0lax">#No</th>
+                                    <th class="tg-0lax">Subject Name</th>
+                                    <th class="tg-0lax">Marks</th>
+                                    <th class="tg-0lax">GPA</th>
+                                    <th class="tg-0lax">Grade</th>
+                                </tr>
+                                </thead>
+                                <tbody id="resultBody" class="" >
+                                <!-- This table Row will come form JS -->
+                                <!-- <tr>
+                                    <td class="tg-0lax"></td>
+                                    <td class="tg-0lax"></td>
+                                    <td class="tg-0lax"></td>
+                                    <td class="tg-0lax"></td>
+                                    <td class="tg-0lax"></td>
+                                </tr> -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="finalResult" class="finalResult">    
+                        </div>
+                    </div>
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Subject Marks app with notification Color End-->
+
     <span class="by-an">by - Ananda Kumar Saha</span>
     <script src="app.js"></script>
     <script src="function.js"></script>
