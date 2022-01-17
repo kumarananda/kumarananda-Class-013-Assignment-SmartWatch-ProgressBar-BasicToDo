@@ -148,9 +148,6 @@ gpaForm.addEventListener('submit', function (e) {
 
   
 
-  console.log(finalGrade);
-  
-
   detailsBody.innerHTML = `
   <tr>
     <td class="tg-0lax">01</td>
@@ -204,10 +201,19 @@ gpaForm.addEventListener('submit', function (e) {
   <td class="tg-0lax">${myr.grade(inReligion.value)}</td>
   </tr>
   `;
-  finalResult.innerHTML =`
-  <p>${myr.cgpacal(myr.gpa(inBangla.value), myr.gpa(inEnglish.value), myr.gpa(inMath.value), myr.gpa(inSocial.value), myr.gpa(inScience.value), myr.gpa(inReligion.value) )}</p>
+
+  if(myr.grade(inBangla.value) == 'F' || myr.grade(inEnglish.value) == 'F' || myr.grade(inMath.value) == 'F' || myr.grade(inSocial.value) == 'F' || myr.grade(inScience.value) == 'F' || myr.grade(inReligion.value) == 'F' ){
+    
+    finalResult.style.backgroundColor = 'red';
+    finalResult.innerHTML =`
+    <p>${myr.cgpacal(myr.gpa(inBangla.value), myr.gpa(inEnglish.value), myr.gpa(inMath.value), myr.gpa(inSocial.value), myr.gpa(inScience.value), myr.gpa(inReligion.value) )}</p>
   `;
-  finalResult.style.backgroundColor =  myr.notifiColor(finalGrade);
+  }else{
+    finalResult.innerHTML =`
+    <p>${myr.cgpacal(myr.gpa(inBangla.value), myr.gpa(inEnglish.value), myr.gpa(inMath.value), myr.gpa(inSocial.value), myr.gpa(inScience.value), myr.gpa(inReligion.value) )}</p>
+    `;
+    finalResult.style.backgroundColor =  myr.notifiColor(finalGrade);
+  };
 
   visibleCon.style =`
   visibility: visible;
