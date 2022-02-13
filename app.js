@@ -115,6 +115,34 @@ add.addEventListener('click', function () {
 // <!-- Basic TO-DO App end (whithout array) -->
 
 
+// regulaar expretion / validition
+let nameV = /^[a-zA-Z\s\.]{4,20}$/;
+let rollV = /^[0-9]{1,4}$/;
+let classV = /^[0-9]{2}$/;
+//marks valivation 
+function markV(m){
+    let d = parseInt(m)
+    if(d < 0 || d > 100){
+        return false;
+    }else{
+        return true;
+    }
+}
+
+// console.log(markV(101));
+
+// // creat elements
+// let forName = document.createElement('p');
+// forName.textContent = `Name must be a-z, A-Z, "." min 4 max 20 characters`;
+// forName.style.color = 'red';
+
+// let forRoll = document.createElement('p');
+// forRoll.innerHTML = `Roll must be 2-4 number characters & not be 0`;
+// forRoll.style.color = 'red';
+
+// let forClass = document.createElement('p');
+// forClass.innerHTML = `Class must be 2 number characters`;
+// forClass.style.color = 'red';
 
 
 // Subject Marks app with notification Color start
@@ -139,12 +167,32 @@ const finalResult = document.getElementById('finalResult');
 
 const visibleCon = document.querySelector('.visibleCon')
 
+const mess = document.querySelector('.mess');
+
 gpaForm.addEventListener('submit', function (e) {
   e.preventDefault();
 
   let avrMark = (parseInt(inBangla.value) + parseInt(inEnglish.value) + parseInt(inMath.value) + parseInt(inSocial.value) + parseInt(inSocial.value) + parseInt(inReligion.value)) / 6;
   let avrGpa = myr.gpa(avrMark);
-  let finalGrade = myr.totalGrade(avrGpa)
+  let finalGrade = myr.totalGrade(avrGpa);
+
+
+  if(inName.value =="" || inFathers.value=="" || inMothers.value=="" || inAge.value=="" || inClass.value =="" || inBangla.value=="" || inEnglish.value=="" || inMath.value=="" || inSocial.value=="" || inScience.value=="" || inReligion.value==""){
+    mess.style.display ='block';
+    } else if(nameV.test(inName.value) == false){
+        inName.nextElementSibling.innerHTML = `<p>Name must be a-z, A-Z, "." min 4 max 20 characters</p>`;
+        inName.nextElementSibling.style= `font-size: 12px; color: red; margin-bottom: 0;`;
+
+        mess.style.display ='none';
+        
+    }else  if(nameV.test(inFathers.value) == false){
+        inFathers.nextElementSibling.innerHTML = `<p>Name must be a-z, A-Z, "." min 4 max 20 characters</p>`;
+        inFathers.nextElementSibling.style= `font-size: 12px; color: red; margin-bottom: 0px;`;
+        
+        inName.nextElementSibling.display = 'none';
+        mess.style.display ='none';
+        
+    }else // will update
 
   
 
